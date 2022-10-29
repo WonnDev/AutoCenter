@@ -401,6 +401,7 @@
 .sologan-footer p {
   font-size: 14px;
   margin-top: 0.5rem;
+  padding-right: 30px;
 }
 .group-icon {
   display: flex;
@@ -420,11 +421,224 @@
 .group-info p {
   margin-bottom: 0.5rem;
 }
-.about p,
-.policy p {
+.about a,
+.policy a {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.about a:hover,
+.policy a:hover {
+  color: #e41a23;
+}
+/*header*/
+.background-header {
+  background: #0e0d0d;
+  padding: 15px 0;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.background-header p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.class-bonus {
+  padding: 0;
+}
+.phone,
+.time-open,
+.add {
+  display: flex;
+  font-size: 14px;
+}
+.phone,
+.time-open {
+  padding-right: 10px;
+  border-right: 1px solid white;
+}
+.phone i,
+.time-open i,
+.add i {
+  margin: 5px 10px;
+}
+.navbar {
+  background: white;
+  color: #2e3a59;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.icon-navbar {
+  padding: 0 40px;
+}
+.img-logo {
+  margin-bottom: 0.5rem;
+}
+.logo,
+.img-logo {
+  position: relative;
+  z-index: 1;
+}
+.logo::before {
+  position: absolute;
+  content: "";
+  background: #e41a23;
+  width: 400%;
+  height: 96px;
+  top: -16px;
+  right: 0;
+}
+.logo::after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: -96px;
+  border-style: solid;
+  border-width: 96px 0 0 96px;
+  border-color: transparent transparent transparent #e41a23;
+}
+.button button {
+  border: 1px solid #e41a23;
+  background: #e41a23;
+  color: white;
+  padding: 11px 22px;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.button button:hover {
+  background: white;
+  color: #e41a23;
+}
+.live {
+  color: #e41a23 !important;
+}
+.menu-item {
+  display: flex;
+  margin-left: 70px;
+}
+.menu-item a {
+  text-decoration: none;
+  color: #2e3a59;
+  font-size: 14px;
+}
+a .fa-angle-down {
+  font-size: 13px;
+}
+.menu-item .home-nav,
+.menu-item .about-nav,
+.menu-item .news-nav,
+.menu-item .contact-nav,
+.menu-item .service-nav,
+.menu-item .product-nav {
+  padding: 24px 10px;
+}
+.menu-item .home-nav a:hover,
+.menu-item .about-nav a:hover,
+.menu-item .news-nav a:hover,
+.menu-item .contact-nav a:hover,
+.menu-item .service-nav a:hover,
+.menu-item .product-nav a:hover {
+  color: #e41a23;
+}
+.icon-navbar i {
+  padding: 0 10px;
   cursor: pointer;
 }
-.about p:hover,
-.policy p:hover {
-  color: #e41a23;
+.icon-navbar .fa-cart-shopping {
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #d6d6d6;
+  position: relative;
+}
+.fa-cart-shopping span {
+  position: absolute;
+  color: white;
+  background: #e41a23;
+  border-radius: 100%;
+  padding: 3px;
+  top: -7px;
+  right: 7px;
+  font-size: 6px;
+}
+/**dropdown**/
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:hover .dropdown-content-1,
+.dropdown:hover .dropdown-content-2 {
+  display: block;
+}
+.dropdown-content,
+.dropdown-content-1,
+.dropdown-content-2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 0px 16px;
+  z-index: 1;
+  top: 72px;
+}
+.dropdown-content-2 {
+  left: -71px;
+}
+.detail-dropdown-content-1 a,
+.detail-dropdown-content-2 a {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  margin: 5px 10px;
+  padding: 5px 0;
+}
+.detail-dropdown-content-2 .combo-2-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.combo-2-item a {
+  margin: 3px 10px !important;
+}
+
+.last-item {
+  border: none !important;
+}
+
+@media only screen and (max-width: 480px) {
+  /*index*/
+  #brand .group-item {
+    overflow: auto;
+  }
+
+  /*section*/
+  .title-section {
+    padding: 0;
+  }
+  .logo,
+  .icon-navbar,
+  .button {
+    display: none;
+  }
+  .list-button {
+    display: flex;
+    width: 100%;
+    margin: 15px 0;
+  }
+  .list-item-product {
+    flex-direction: column;
+  }
+  .group-item-product {
+    flex-direction: row;
+  }
+  .item-product {
+    max-width: 125px;
 }
