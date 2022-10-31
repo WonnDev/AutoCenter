@@ -175,6 +175,10 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.service-nav a,
+.product-nav a {
+  cursor: pointer;
+}
 .tablinks {
   font-size: 15px;
 }
@@ -199,7 +203,6 @@
   border-radius: 5px;
   margin-right: 8px;
 }
-
 .button-close {
   float: right;
   cursor: pointer;
@@ -447,7 +450,7 @@
   margin-bottom: 0;
   font-size: 13px;
 }
-.class-bonus {
+.nav-bar .container {
   padding: 0;
 }
 .phone,
@@ -478,6 +481,7 @@
 }
 .img-logo {
   margin-bottom: 0.5rem;
+  width: 100px;
 }
 .logo,
 .img-logo {
@@ -488,8 +492,8 @@
   position: absolute;
   content: "";
   background: #e41a23;
-  width: 400%;
-  height: 96px;
+  width: 700px;
+  height: 86px;
   top: -16px;
   right: 0;
 }
@@ -497,9 +501,9 @@
   content: "";
   position: absolute;
   top: -16px;
-  right: -96px;
+  right: -86px;
   border-style: solid;
-  border-width: 96px 0 0 96px;
+  border-width: 86px 0 0 86px;
   border-color: transparent transparent transparent #e41a23;
 }
 .button button {
@@ -614,14 +618,26 @@ a .fa-angle-down {
 }
 
 @media only screen and (max-width: 480px) {
-  /*index*/
   #brand .group-item {
     overflow: auto;
   }
-
-  /*section*/
-  .title-section {
+  #infomation .row,
+  .group-item-service {
+    flex-direction: column;
+  }
+  .title-section,
+  .nav-bar .container {
     padding: 0;
+  }
+  .nav-bar .row {
+    width: 100%;
+  }
+  .menu-item,
+  .nav-bar .row {
+    margin: 0;
+  }
+  #brand img {
+    width: 100px;
   }
   .logo,
   .icon-navbar,
@@ -641,4 +657,83 @@ a .fa-angle-down {
   }
   .item-product {
     max-width: 125px;
+  }
+  .list-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .news .title-index a {
+    font-size: 14px;
+  }
+  #infomation .img-left img {
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+  #infomation .button-more {
+    position: unset;
+  }
+  .menu-item .home-nav,
+  .menu-item .about-nav,
+  .menu-item .service-nav,
+  .menu-item .product-nav,
+  .menu-item .news-nav,
+  .menu-item .contact-nav {
+    padding: 10px 5px;
+  }
+  .card-item {
+    margin: 10px;
+  }
+  .service .item-service {
+    border-left: 2px solid #767676;
+  }
+  .item1 {
+    border-top: 2px solid #767676;
+    margin-top: 10px;
+  }
+  .service .button-more {
+    padding: 15px 0;
+    width: 40%;
+  }
+
+  .dropdown:hover .dropdown-content-1 {
+    display: none;
+  }
+  .background-header p,
+  .phone,
+  .time-open,
+  .add {
+    font-size: 11px;
+  }
+
+  .dropdown-content-1,
+  .dropdown-content-2 {
+    top: 44px;
+  }
+
+  /*footer*/
+  .footer .group-info {
+    font-size: 13px;
+  }
+  .footer .contact i {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+  .footer .contact .address,
+  .footer .contact .tel .phone,
+  .footer .contact .mail {
+    font-size: 10px;
+    flex-direction: column;
+    border: none;
+  }
+  .address,
+  .tel,
+  .mail {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .footer .contact .address:before,
+  .footer .contact .tel:before {
+    display: none;
+  }
 }
