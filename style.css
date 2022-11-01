@@ -617,9 +617,41 @@ a .fa-angle-down {
   border: none !important;
 }
 
+/****************  About HTML  *******************/
+.img-background {
+  background: url(img/background-brecum.png) no-repeat center center;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#about .img-background {
+  color: white;
+}
+.img-background h3 {
+  text-transform: uppercase;
+}
+.local-title a {
+  padding: 0 10px;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+}
+.style-back-home {
+  cursor: pointer;
+}
+.style-back-home:hover {
+  color: #e41a23;
+}
+/**************************** REPONSIVE ***********************************/
 @media only screen and (max-width: 480px) {
   #brand .group-item {
     overflow: auto;
+    justify-content: unset;
+  }
+  #brand .item {
+    margin: 0 15px;
   }
   #infomation .row,
   .group-item-service {
@@ -643,6 +675,15 @@ a .fa-angle-down {
   .icon-navbar,
   .button {
     display: none;
+  }
+  .phone p {
+    padding-top: 10px;
+  }
+  .phone i,
+  .time-open i,
+  .add i {
+    margin: 12px 5px 0 10px;
+    font-size: 15px;
   }
   .list-button {
     display: flex;
@@ -695,10 +736,6 @@ a .fa-angle-down {
     padding: 15px 0;
     width: 40%;
   }
-
-  .dropdown:hover .dropdown-content-1 {
-    display: none;
-  }
   .background-header p,
   .phone,
   .time-open,
@@ -710,7 +747,15 @@ a .fa-angle-down {
   .dropdown-content-2 {
     top: 44px;
   }
+  .nav-bar {
+    display: none;
+  }
 
+  .background-header {
+    position: relative;
+    margin-top: 78px;
+    padding: 10px 0;
+  }
   /*footer*/
   .footer .group-info {
     font-size: 13px;
@@ -735,5 +780,76 @@ a .fa-angle-down {
   .footer .contact .address:before,
   .footer .contact .tel:before {
     display: none;
+  }
+}
+/************ navbar-mobile ***********/
+.navbar-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333444;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 18px;
+}
+.img-menu-navbar-mobile {
+  width: 115px;
+  height: 50px;
+}
+@media screen and (max-width: 600px) {
+  #navbar {
+    padding-top: 68px;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar-mobile {
+    display: block;
   }
 }
