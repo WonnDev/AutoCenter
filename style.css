@@ -10,10 +10,8 @@
 }
 #brand .item {
   margin-right: 25px;
-  cursor: none;
 }
 #brand {
-  padding: 20px 0;
   border-bottom: 1px solid #ddd;
 }
 #brand img {
@@ -23,6 +21,7 @@
 }
 #brand img:hover {
   border: 1px solid #e41a23;
+  cursor: grab;
 }
 #infomation .img-left img {
   width: 450px;
@@ -94,7 +93,7 @@
 .title-section {
   text-align: center;
   color: white;
-  padding: 30px 170px;
+  padding: 30px 0;
 }
 .title-tag a {
   color: #e41a23 !important;
@@ -619,14 +618,14 @@ a .fa-angle-down {
 
 /****************  About HTML  *******************/
 .img-background {
-  background: url(img/background-brecum.png) no-repeat center center;
+  background: url(img/background-brecum.png) no-repeat;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-#about .img-background {
+.img-background {
   color: white;
 }
 .img-background h3 {
@@ -643,6 +642,86 @@ a .fa-angle-down {
 }
 .style-back-home:hover {
   color: #e41a23;
+}
+.img-background-second {
+  background: url(img/background-gt.png) no-repeat;
+  padding: 50px 0;
+}
+.group-item-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.item-info {
+  margin: 0 10px;
+  padding: 10px 40px;
+  background: #e41a23;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 14%;
+}
+.item-info h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.item-info span {
+  background: white;
+  height: 1px;
+  margin-bottom: 0.5rem;
+  padding: 0 10px;
+}
+.item-info p {
+  font-size: 15px;
+}
+
+.img-detail-infomation {
+  width: 400px;
+  border-radius: 5px;
+}
+.detail-infomation .left {
+  padding: 0 30px;
+}
+.detail-infomation {
+  margin: 30px 0;
+}
+.detail-infomation .left {
+  padding: 0 30px;
+}
+.left h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.left p {
+  font-size: 15px;
+}
+
+/*********************** NEWS HTML ****************************/
+.index-news {
+  margin: 30px 0;
+}
+.list-card {
+  margin: 15px 0;
+}
+/*********************** CONTACT HTML ****************************/
+
+.img-background-contact {
+  background: url(img/background-contact.webp) no-repeat;
+}
+.group-text-contact {
+  color: white;
+  padding: 40px 30px;
+}
+.title h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.index-content .col-4,
+.index-content .col-8 {
+  padding: 0;
 }
 /**************************** REPONSIVE ***********************************/
 @media only screen and (max-width: 480px) {
