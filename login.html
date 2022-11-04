@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About AutoCenter</title>
+    <title>AutoCenter Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="about">
+<body>
     <header id="header">
         <div class="background-header">
             <div class="phone">
@@ -60,7 +60,7 @@
                                 <a href="index.html">Trang chủ</a>
                             </div>
                             <div class="about-nav">
-                                <a class="live" href="about.html">Giới thiệu</a>
+                                <a href="about.html">Giới thiệu</a>
                             </div>
                             <div class="service-nav dropdown">
                                 <a>Dịch vụ <i class="fa-solid fa-angle-down"></i></a>
@@ -132,119 +132,123 @@
         </div>
     </header>
     <section class="img-background">
-        <h3>giới thiệu</h3>
+        <h3>Tài khoản</h3>
         <div class="local-title">
-            <a href="index.html" class="style-back-home">Trang chủ</a> / <a class="live">Giới thiệu</a>
+            <a href="index.html" class="style-back-home">Trang chủ</a> / <a class="live">Tài khoản</a>
         </div>
     </section>
-    <section id="brand">
+    <section id="form-input" class="form-input">
         <div class="container">
-            <div class="group-item">
-                <div class="item">
-                    <img src="img/img_brand_1.jpg" alt="">
+            <div class="group-form-input">
+                <div class="list-button style-button">
+                    <button class="tablinks" onclick="openDetails(event, 'login')" id="defaultOpen">đăng nhập</button>
+                    <span>/</span>
+                    <button class="tablinks" onclick="openDetails(event, 'signin')">đăng kí</button>
                 </div>
-                <div class="item">
-                    <img src="img/img_brand_2.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="img/img_brand_3.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="img/img_brand_4.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="img/img_brand_5.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="img/img_brand_6.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="infomation">
-        <div class="container">
-            <div class="row">
-                <div class="col img-left">
-                    <img src="img/banner_information.png" alt="">
-                </div>
-                <div class="col info-right">
-                    <div class="info-item">
-                        <a class="title-tag">Về chúng tôi</a>
-                        <h3>Chào mừng đến với<br>Auto Center</h3>
-                        <p>Được biết đến là trung tâm uy tín, nơi đáng tin cậy của những người yêu xế cưng tại khu vực,
-                            Chúng tôi cung cấp dịch vụ: máy gầm đồng sơn; rửa xe; sơn, sửa chữa, thay thế phụ tùng, lắp
-                            đặt nội thất, đồ chơi xe ô tô; tư vấn bảo hiểm, tư vấn mua bán xe ô tô. Với bề dày hoạt
-                            động, cùng đội ngũ nhân viên chuyên nghiệp, nhiệt tình, trang thiết bị sửa chữa hiện đại,
-                            linh phụ kiện chính hãng…</p>
-                        <div class="group-img-text">
-                            <div class="item-img-text left">
-                                <img src="img/icon_information1.png" alt="">
-                                <div class="text">
-                                    <a>150+</a>
-                                    <p>Nhân viên</p>
-                                </div>
+                <div id="login" class="tabcontent">
+                    <span class="button-close" onclick="this.parentElement.style.display='none'">&times</span>
+                    <form action="">
+                        <div class="row box-input">
+                            <p>THÔNG TIN CÁ NHÂN</p>
+                            <div class="col form-left">
+                                <label for="">Họ:</label>
+                                <input type="text">
+                                <label for="">Tên: </label>
+                                <input type="text">
+                                <label for="">Số điện thoại: *</label>
+                                <input type="text">
                             </div>
-                            <div class="item-img-text right">
-                                <img src="img/icon_information2.png" alt="">
-                                <div class="text">
-                                    <a>8000+</a>
-                                    <p>Khách hàng</p>
+                            <div class="col form-right">
+                                <label for="">Email: </label>
+                                <input type="text">
+                                <label for="">Mật khẩu: *</label>
+                                <input type="text">
+                                <label for="">Nhập lại mật khẩu: *</label>
+                                <input type="text">
+                            </div>
+                            <div class="button-submit">
+                                <button type="submit"> Đăng kí</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="signin" class="tabcontent">
+                    <span class="button-close" onclick="this.parentElement.style.display='none'">&times</span>
+                    <div class="row group-item-product">
+                        <div class="col list-item-product">
+                            <div class="item-product">
+                                <div class="img-item-product">
+                                    <img src="img/gia-dau-nhot-xe-may.png" alt="">
                                 </div>
+                                <div class="name-item-product">
+                                    <p>Dầu Nhớt Fuchs Silkolene 10w40 và 10w30 chính hãng</p>
+                                    <a>200.000<u>đ</u></a>&nbsp;&nbsp;&nbsp;<a class="line-center">450.000đ</a>
+                                </div>
+                                <button class="button-bottom-item">Tùy chọn</button>
+                            </div>
+                            <div class="item-product">
+                                <div class="img-item-product">
+                                    <img src="img/volkswagen-co-dau.jpg" alt="">
+                                </div>
+                                <div class="name-item-product">
+                                    <p>Dầu Nhớt Động Cơ 10w40 Ô Tô TOTAL QUARTZ 5000 SN</p>
+                                    <a>250.000<u>đ</u></a>&nbsp;&nbsp;&nbsp;<a class="line-center">550.000đ</a>
+                                </div>
+                                <button class="button-bottom-item">Tùy chọn</button>
+                            </div>
+                            <div class="item-product">
+                                <div class="img-item-product">
+                                    <img src="img/gia-dau-nhot-xe-may-4.png" alt="">
+                                </div>
+                                <div class="name-item-product">
+                                    <p>Dầu Nhớt Tổng Hợp 10w40 MOTUL TOTAL SCOOTER Jaso MB </p>
+                                    <a>300.000<u>đ</u></a>&nbsp;&nbsp;&nbsp;<a class="line-center">650.000đ</a>
+                                </div>
+                                <button class="button-bottom-item">Tùy chọn</button>
+                            </div>
+                            <div class="item-product">
+                                <div class="img-item-product">
+                                    <img src="img/dau-nhot-nhap-khau-song-dai-long-723924.jpg" alt="">
+                                </div>
+                                <div class="name-item-product">
+                                    <p>Dầu Nhớt Xe Ô Tô CASTROL EDGE 5W30 MULTIPOWER Plus SP 4L</p>
+                                    <a>1.500.000<u>đ</u></a>&nbsp;&nbsp;&nbsp;<a class="line-center">2.500.000đ</a>
+                                </div>
+                                <button class="button-bottom-item">Tùy chọn</button>
+                            </div>
+                        </div>
+                        <div class="col list-item-product">
+                            <div class="item-product">
+                                <div class="img-item-product">
+                                    <img src="img/volkswagen-co-dau.jpg" alt="">
+                                </div>
+                                <div class="name-item-product">
+                                    <p>Phụ Gia Dầu Nhớt Nano Graphene Oli Additive DD Phụ Gia</p>
+                                    <a>250.000<u>đ</u></a>&nbsp;&nbsp;&nbsp;<a class="line-center">300.000đ</a>
+                                </div>
+                                <button class="button-bottom-item">Tùy chọn</button>
                             </div>
                         </div>
                     </div>
-                    <div class="button-more">
-                        <span>Xem thêm</span>
-                    </div>
+                </div>
+            </div>
+            <div class="signin-with">
+                <p>Hoặc đăng nhập bằng</p>
+                <div class="group-item-login-with">
+                    <a href="" class="login-with-fb">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        facebook
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-google"></i>
+                        google
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="img-background-second">
-        <div class="group-item-info">
-            <div class="item-info">
-                <h3>2+</h3>
-                <span class="line"></span>
-                <p>Năm kinh nghiệm</p>
-            </div>
-            <div class="item-info">
-                <h3>25+</h3>
-                <span class="line"></span>
-                <p>Nhân viên</p>
-            </div>
-            <div class="item-info">
-                <h3>32+</h3>
-                <span class="line"></span>
-                <p>Đối tác</p>
-            </div>
-            <div class="item-info">
-                <h3>960+</h3>
-                <span class="line"></span>
-                <p>Khách hàng</p>
-            </div>
-        </div>
-    </section>
-    <section class="detail-infomation">
-        <div class="container">
-            <div class="row">
-                <div class="col left">
-                    <h3>Tầm nhìn, nhiệm vụ</h3>
-                    <p>Auto Center luôn luôn cố gắng để trở thành nơi cung cấp hàng đầu các dịch vụ “Chăm sóc xe toàn
-                        diện” cho quý khách hàng, là gara có thương hiệu về tất cả các dịch vụ liên quan đến bảo trì,
-                        bảo dưỡng, sửa chữa ô tô. Nơi đây cũng sẽ như một spa hiện đại trong lĩnh vực làm đẹp, làm mới
-                        với những phụ tùng, thiết bị chính hãng uy tín nhất trên thị trường. Để làm được điều đó, chúng
-                        tôi sẵn sàng lắng nghe, tìm hiểu nhu cầu và đưa ra các giải pháp tối ưu nhất dành cho quý khách
-                        hàng.
-                    </p>
-                    <p>Chúng tôi tạo ra cách làm tốt hơn thông qua việc chuyên môn hóa tới từng khâu công việc, tới từng
-                        con người và luôn đặt tính hiệu quả của công việc lên trên hàng đầu.</p>
-                </div>
-                <div class="col right">
-                    <img class="img-detail-infomation" src="img/banner-vision-mission.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+
+
     <script src="index.js"></script>
 </body>
 

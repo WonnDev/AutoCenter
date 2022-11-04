@@ -227,6 +227,7 @@
 .name-item-product p {
   color: #2e3a59;
   font-weight: 500;
+  margin-top: 1rem;
 }
 .name-item-product p:hover {
   color: #e41a23;
@@ -458,10 +459,20 @@
   display: flex;
   font-size: 14px;
 }
+.background-header .phone,
+.background-header .time-open {
+  padding-right: 10px;
+  border-right: 1px solid white;
+}
+.background-header .phone {
+  flex-direction: row;
+}
 .phone,
 .time-open {
   padding-right: 10px;
-  border-right: 1px solid white;
+}
+.phone {
+  flex-direction: column;
 }
 .phone i,
 .time-open i,
@@ -477,6 +488,28 @@
 }
 .icon-navbar {
   padding: 0 40px;
+}
+.icon-navbar a {
+  color: #2e3a59;
+}
+.icon-navbar i {
+  padding: 0 10px;
+  cursor: pointer;
+}
+.icon-navbar .fa-cart-shopping {
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #d6d6d6;
+  position: relative;
+}
+.fa-cart-shopping span {
+  position: absolute;
+  color: white;
+  background: #e41a23;
+  border-radius: 100%;
+  padding: 3px;
+  top: -7px;
+  right: 7px;
+  font-size: 6px;
 }
 .img-logo {
   margin-bottom: 0.5rem;
@@ -549,25 +582,7 @@ a .fa-angle-down {
 .menu-item .product-nav a:hover {
   color: #e41a23;
 }
-.icon-navbar i {
-  padding: 0 10px;
-  cursor: pointer;
-}
-.icon-navbar .fa-cart-shopping {
-  border-left: 1px solid #d6d6d6;
-  border-right: 1px solid #d6d6d6;
-  position: relative;
-}
-.fa-cart-shopping span {
-  position: absolute;
-  color: white;
-  background: #e41a23;
-  border-radius: 100%;
-  padding: 3px;
-  top: -7px;
-  right: 7px;
-  font-size: 6px;
-}
+
 /**dropdown**/
 .dropdown {
   position: relative;
@@ -728,8 +743,8 @@ a .fa-angle-down {
   position: relative;
   z-index: 2;
 }
-.index-contact .row .col-4,
-.index-contact .row .col-8 {
+.index-contact .col-4,
+.index-contact .col-8 {
   padding: 0;
 }
 .title h3 {
@@ -799,6 +814,82 @@ a .fa-angle-down {
   display: flex;
 }
 
+/**************************** LOGIN HTML **********************************/
+.title-logpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#form-input .list-button button {
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 25px;
+  margin-bottom: 0;
+  font-weight: 700;
+  background: none;
+}
+#form-input .list-button {
+  width: 100%;
+}
+#form-input .style-button {
+  background: none;
+}
+#form-input .active,
+#form-input .style-button button:hover {
+  color: #e41a23;
+}
+#form-input .style-button span {
+  font-size: 25px;
+}
+#form-input .style-button button {
+  margin-right: 0;
+}
+.box-input p {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.box-input .form-left,
+.box-input .form-right {
+  display: flex;
+  flex-direction: column;
+}
+.box-input label {
+  font-size: 13px;
+  margin: 5px 0;
+}
+.box-input input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px 15px;
+  font-size: 13px;
+}
+.box-input button {
+  outline: none;
+  border: 1px solid #e41a23;
+  border-radius: 5px;
+  font-weight: 700;
+  margin: 15px 0;
+  color: #e41a23;
+  background: none;
+  padding: 10px;
+  width: 20%;
+}
+.box-input button:hover {
+  background: #e41a23;
+  color: white;
+}
+.button-submit {
+  max-width: 100%;
+  text-align: center;
+}
+#login form {
+  padding: 0 150px;
+}
+#form-input .signin-with {
+  text-align: center;
+}
+
 /**************************** REPONSIVE ***********************************/
 @media only screen and (max-width: 480px) {
   #brand .group-item {
@@ -845,14 +936,20 @@ a .fa-angle-down {
     width: 100%;
     margin: 15px 0;
   }
+  .name-item-product {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
   .list-item-product {
+    justify-content: unset;
     flex-direction: column;
   }
   .group-item-product {
-    flex-direction: row;
+    display: flex;
   }
   .item-product {
-    max-width: 125px;
+    max-width: 100%;
   }
   .list-card {
     flex-direction: column;
@@ -860,6 +957,10 @@ a .fa-angle-down {
   }
   .news .title-index a {
     font-size: 14px;
+  }
+  .name-item-product p,
+  .name-item-product a {
+    font-size: 16px;
   }
   #infomation .img-left img {
     width: 100%;
@@ -936,14 +1037,54 @@ a .fa-angle-down {
   .footer .contact .tel:before {
     display: none;
   }
+  /************ about html ************/
+  .item-info {
+    width: 20%;
+    padding: 10px 0;
+  }
+  .item-info h3 {
+    font-size: 30px;
+  }
+  .item-info span {
+    margin: 0 10px 10px 10px;
+  }
+  .detail-infomation {
+    margin: 0;
+  }
+  .img-detail-infomation {
+    width: 380px;
+  }
+  /******* contact html ********/
+  .index-contact {
+    flex-direction: column;
+  }
+  .index-contact .col-4,
+  .index-contact .col-8 {
+    width: 100%;
+  }
+  .index-contact .col-8 iframe {
+    width: 100%;
+    margin-top: 20px;
+  }
+  /************* service html **************/
+  #autocenter-service .index-product {
+    padding: 0;
+  }
+  #autocenter-service .tablinks {
+    margin: 0 20px;
+  }
+  #autocenter-service .tabcontent {
+    padding: 70px 10px;
+  }
 }
+
 /************ navbar-mobile ***********/
 .navbar-mobile {
   display: none;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
 }
 .topnav {
   overflow: hidden;
