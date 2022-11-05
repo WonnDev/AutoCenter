@@ -879,15 +879,65 @@ a .fa-angle-down {
   background: #e41a23;
   color: white;
 }
-.button-submit {
+.box-input .form-right button {
+  width: 40%;
+}
+#signin .button-submit {
   max-width: 100%;
   text-align: center;
 }
-#login form {
+#login .button-submit {
+  max-width: 100%;
+}
+#login .box-input a {
+  text-decoration: none;
+  color: #e41a23;
+  margin-top: 0.5rem;
+  font-size: 14px;
+}
+#login .form-right h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+#login .form-right p {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+}
+#login form,
+#signin form {
   padding: 0 150px;
 }
 #form-input .signin-with {
   text-align: center;
+}
+#form-input .signin-with p {
+  font-size: 14px;
+}
+.login-with-gg,
+.login-with-fb {
+  padding: 5px;
+  padding-right: 12px;
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+.login-with-gg:hover,
+.login-with-fb:hover {
+  color: white;
+}
+.login-with-gg i,
+.login-with-fb i {
+  padding: 5px 10px;
+  border-right: 1px solid brown;
+}
+.login-with-gg {
+  background: orangered;
+}
+.login-with-fb {
+  background: blue;
 }
 
 /**************************** REPONSIVE ***********************************/
@@ -1075,6 +1125,31 @@ a .fa-angle-down {
   }
   #autocenter-service .tabcontent {
     padding: 70px 10px;
+  }
+  /******************* login html ********************/
+  #login form,
+  #signin form {
+    padding: 0;
+  }
+  #login .box-input {
+    flex-direction: column;
+  }
+  #login .box-input a {
+    margin-bottom: 1rem;
+  }
+  #login .form-right p {
+    margin-bottom: 0.5rem;
+  }
+  .box-input .form-right {
+    margin-top: 60px;
+  }
+  .box-input .button-login {
+    position: relative;
+    top: -275px;
+    width: 40%;
+  }
+  .box-input button {
+    width: 40%;
   }
 }
 
