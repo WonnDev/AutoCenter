@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart AutoCenter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="background-header">
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                <p>19006750</p>
+            </div>
+            <div class="time-open">
+                <i class="fa-regular fa-clock"></i>
+                <p>Mở cửa: 7h30 - 17h30 ( Thứ 2 - Chủ nhật)</p>
+            </div>
+            <div class="add">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Tòa nhà Ladeco, 266 Đội Cấn, Ba Đình, Hà Nội, Vietnam.</p>
+            </div>
+        </div>
+        <section id="navbar-mobile" class="navbar-mobile">
+            <div class="topnav" id="myTopnav">
+                <a href="index.html"><img class="img-menu-navbar-mobile" src="img/logo.png" alt=""></a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="service.html">Dịch vụ</a>
+                <a href="product.html">Sản phẩm</a>
+                <a href="news.html">Tin tức</a>
+                <a href="contact.html">Liên hệ</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunctionNavbarMobile()">☰</a>
+            </div>
+        </section>
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar">
+                        <div class="logo">
+                            <img class="img-fluid img-logo" src="img/logo.png" alt="">
+                        </div>
+                        <div class="menu-item">
+                            <div class="home-nav">
+                                <a href="index.html">Trang chủ</a>
+                            </div>
+                            <div class="about-nav">
+                                <a href="about.html">Giới thiệu</a>
+                            </div>
+                            <div class="service-nav dropdown">
+                                <a>Dịch vụ <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown-content-1">
+                                    <div class="detail-dropdown-content-1">
+                                        <a class="dropdown-item" href="service.html">Sửa chữa khung gầm ô tô</a>
+                                        <a href="service.html">Đại tu động cơ</a>
+                                        <a href="service.html">Bảo dưỡng ô tô định kỳ</a>
+                                        <a href="service.html">Xử lý hệ thống điện</a>
+                                        <a href="service.html">Phử bóng Ceramic</a>
+                                        <a class="last-item" href="service.html">Vệ sinh khoang máy ô tô</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-nav dropdown">
+                                <a>Sản phẩm <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown-content-2">
+                                    <div class="detail-dropdown-content-2">
+                                        <div class="combo-2-item">
+                                            <a href="product.html">Thảm lót ô tô</a>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+                                        <div class="combo-2-item">
+                                            <a href="product.html">Phụ kiện khác</a>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+                                        <div class="combo-2-item">
+                                            <a href="product.html">Đèn ô tô</a>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+                                        <div class="combo-2-item">
+                                            <a href="product.html">Lốp ô tô</a>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+                                        <div class="combo-2-item">
+                                            <a href="product.html">Dầu nhớt ô tô</a>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+                                        <div class="combo-2-item">
+                                            <a class="last-item" href="product.html">Sản phẩm nổi bật</a>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news-nav">
+                                <a href="news.html">Tin tức</a>
+                            </div>
+                            <div class="contact-nav">
+                                <a href="contact.html">Liên hệ</a>
+                            </div>
+                        </div>
+                        <div class="icon-navbar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-cart-shopping">
+                                <span>0</span>
+                            </i>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="button">
+                            <button>
+                                Đặt lịch <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="img-background">
+        <h3>Giỏ Hàng</h3>
+        <div class="local-title">
+            <a href="index.html" class="style-back-home">Trang chủ</a> / <a class="live">Giỏ hàng</a>
+        </div>
+    </section>
+    <section id="cart">
+        <div class="container" style="padding-bottom: 0">
+            <div class="title-page">
+                <h4>Giỏ hàng của bạn</h4>
+            </div>
+        </div>
+        <div id="table">
+            <div class="container">
+                <div class="row">
+                    <div class="table">
+                        <div class="title-table">
+                            <p>Thông tin sản phẩm</p>
+                            <div class="detail-title-table">
+                                <p>Đơn giá</p>
+                                <p>Số lượng</p>
+                                <p>Thành tiền</p>
+                            </div>
+                        </div>
+                        <div class="group-info-item">
+                            <div class="info-item">
+                                <div class="left">
+                                    <div class="img-item">
+                                        <img class="img-fluid"
+                                            src="img/gia-dau-nhot-xe-may-1-b8b37985-81df-4f47-9e32-2907be30ca76.webp"
+                                            alt="">
+                                    </div>
+                                    <div class="name-item">
+                                        <p>Dầu Nhớt Fuchs Silkolene 10w40 và 10w30 chính hãng nhập khẩu từ Châu Âu</p>
+                                        <p class="mil">1 lít</p>
+                                        <span>Xóa</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">
+                                        <span class="output-price"> 200.000<u>đ</u></span>
+                                    </div>
+                                    <div class="number">
+                                        <span>-</span>
+                                        <span class="output-number">0</span>
+                                        <span>+</span>
+                                    </div>
+                                    <div class="output-cost">
+                                        <span>200.000<u>đ</u></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="left">
+                                    <div class="img-item">
+                                        <img class="img-fluid"
+                                            src="img/gia-dau-nhot-xe-may-1-b8b37985-81df-4f47-9e32-2907be30ca76.webp"
+                                            alt="">
+                                    </div>
+                                    <div class="name-item">
+                                        <p>Dầu Nhớt Fuchs Silkolene 10w40 và 10w30 chính hãng nhập khẩu từ Châu Âu</p>
+                                        <p class="mil">1 lít</p>
+                                        <span>Xóa</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="price">
+                                        <span class="output-price"> 200.000<u>đ</u></span>
+                                    </div>
+                                    <div class="number">
+                                        <span>-</span>
+                                        <span class="output-number">0</span>
+                                        <span>+</span>
+                                    </div>
+                                    <div class="output-cost">
+                                        <span>200.000<u>đ</u></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <div class="total-to-pay">
+                                    <div class="total">
+                                        <p>Tổng tiền:</p>
+                                        <span class="total-cost"> 0<u>đ</u> </span>
+                                    </div>
+                                    <div class="button-to-pay">
+                                        <button>Thanh toán</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

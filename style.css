@@ -939,6 +939,106 @@ a .fa-angle-down {
 .login-with-fb {
   background: blue;
 }
+/******************************** cart html *******************************/
+.table {
+  border: 1px solid #ddd;
+}
+.title-page h4 {
+  color: #e41a23;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.title-table {
+  border-bottom: 1px solid #ddd;
+}
+.title-table,
+.detail-title-table,
+.info-item,
+.info-item .right,
+.info-item .left,
+.number,
+.total {
+  display: flex;
+  flex-direction: row;
+}
+.output-price,
+.output-cost span,
+.total-to-pay {
+  font-weight: bold;
+}
+.button-to-pay button {
+  border: 0;
+  padding: 10px 0;
+  background: #e41a23;
+  color: white;
+  border-radius: 3px;
+  width: 70%;
+}
+.button-to-pay {
+  text-align: center;
+}
+.total {
+  justify-content: space-around;
+}
+.info-item {
+  border-bottom: 1px solid #ddd;
+}
+.name-item {
+  padding: 10px;
+}
+.number {
+  justify-content: center;
+}
+.name-item p {
+  margin-bottom: 0.5rem;
+}
+.name-item span {
+  color: #e41a23;
+  font-size: 13px;
+  cursor: pointer;
+}
+.number span {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.number span {
+  cursor: pointer;
+  width: 22px;
+}
+.info-item .right {
+  align-items: center;
+  text-align: center;
+}
+.number .output-number {
+  border-left: 0;
+  border-right: 0;
+  cursor: unset;
+  font-size: 14px;
+}
+.detail-title-table p,
+.title-table p {
+  padding: 0.5rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+.detail-title-table p {
+  text-align: center;
+}
+.title-table p,
+.detail-title-table,
+.info-item .left,
+.info-item .right,
+.info-item .right div {
+  width: 50%;
+}
+.img-item img {
+  width: 85px;
+}
+.name-item p {
+  font-size: 14px;
+}
 
 /**************************** REPONSIVE ***********************************/
 @media only screen and (max-width: 480px) {
@@ -1150,6 +1250,10 @@ a .fa-angle-down {
   }
   .box-input button {
     width: 40%;
+  }
+  #form-input .signin-with {
+    position: relative;
+    bottom: 75px;
   }
 }
 
