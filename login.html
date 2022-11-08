@@ -115,11 +115,13 @@
                             </div>
                         </div>
                         <div class="icon-navbar">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-cart-shopping">
-                                <span>0</span>
-                            </i>
-                            <i class="fa-solid fa-user"></i>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="cart.html"><i class="fa-solid fa-cart-shopping">
+                                    <span>0</span>
+                                </i></a>
+                            <a href="login.html">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
                         </div>
                         <div class="button">
                             <button>
@@ -143,7 +145,7 @@
                 <div class="list-button style-button">
                     <button class="tablinks" onclick="openDetails(event, 'login')" id="defaultOpen">đăng nhập</button>
                     <span>/</span>
-                    <button class="tablinks" onclick="openDetails(event, 'signin')">đăng kí</button>
+                    <button class="btnsignin tablinks" onclick="openDetails(event, 'signin')">đăng kí</button>
                 </div>
                 <div id="signin" class="tabcontent">
                     <span class="button-close" onclick="this.parentElement.style.display='none'">&times</span>
@@ -189,7 +191,7 @@
                                 <p>Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra còn
                                     có rất nhiều chính sách và ưu đãi cho các thành viên Template Auto Center</p>
                                 <div class="button-submit">
-                                    <button> Đăng kí </button>
+                                    <button class="btnsignin"> Đăng kí </button>
                                 </div>
                             </div>
                             <div class="button-submit">

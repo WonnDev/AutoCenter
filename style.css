@@ -954,7 +954,7 @@ a .fa-angle-down {
 }
 .title-table,
 .detail-title-table,
-.info-item,
+#cart .info-item,
 .info-item .right,
 .info-item .left,
 .number,
@@ -981,7 +981,7 @@ a .fa-angle-down {
 .total {
   justify-content: space-around;
 }
-.info-item {
+#cart .info-item {
   border-bottom: 1px solid #ddd;
 }
 .name-item {
@@ -1001,8 +1001,6 @@ a .fa-angle-down {
 .number span {
   border: 1px solid #ddd;
   padding: 5px;
-}
-.number span {
   cursor: pointer;
   width: 22px;
 }
@@ -1038,6 +1036,11 @@ a .fa-angle-down {
 }
 .name-item p {
   font-size: 14px;
+}
+.button-to-pay button:hover {
+  color: #e41a23;
+  border: 1px solid #e41a23;
+  background: white;
 }
 
 /**************************** REPONSIVE ***********************************/
@@ -1255,6 +1258,30 @@ a .fa-angle-down {
     position: relative;
     bottom: 75px;
   }
+  /************************ cart *************************/
+  .info-item .left {
+    flex-direction: column;
+  }
+  .info-item .right {
+    font-size: 13px;
+  }
+  .img-item img {
+    width: 100px;
+  }
+  .number span {
+    padding: 5px 3px;
+    width: 16px;
+  }
+  .number {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+  .number .output-number {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-top: 0;
+  }
 }
 
 /************ navbar-mobile ***********/
@@ -1269,7 +1296,6 @@ a .fa-angle-down {
   overflow: hidden;
   background-color: #333444;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -1279,12 +1305,10 @@ a .fa-angle-down {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .topnav .icon {
   display: none;
   border-radius: 5px;
@@ -1309,7 +1333,6 @@ a .fa-angle-down {
     display: block;
   }
 }
-
 @media screen and (max-width: 600px) {
   .topnav.responsive {
     position: relative;
