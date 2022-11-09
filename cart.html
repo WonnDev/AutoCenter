@@ -45,6 +45,8 @@
                 <a href="product.html">Sản phẩm</a>
                 <a href="news.html">Tin tức</a>
                 <a href="contact.html">Liên hệ</a>
+                <a href="cart.html">Giỏ hàng</a>
+                <a href="login.html">Đăng nhập</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunctionNavbarMobile()">☰</a>
             </div>
         </section>
@@ -193,8 +195,8 @@
                                             alt="">
                                     </div>
                                     <div class="name-item">
-                                        <p>Dầu Nhớt Fuchs Silkolene 10w40 và 10w30 chính hãng nhập khẩu từ Châu Âu</p>
-                                        <p class="mil">1 lít</p>
+                                        <p id="name-of-item"> </p>
+                                        <p id="mil" class="mil"> </p>
                                         <span>Xóa</span>
                                     </div>
                                 </div>
@@ -203,12 +205,12 @@
                                         <span class="output-price">200000<u>đ</u></span>
                                     </div>
                                     <div class="number">
-                                        <span>-</span>
-                                        <span class="output-number">0</span>
-                                        <span>+</span>
+                                        <span onclick="clickCounterDowm()"> - </span>
+                                        <span id="output-number" class="output-number">1</span>
+                                        <span onclick="clickCounterUp()"> + </span>
                                     </div>
                                     <div class="output-cost">
-                                        <span>200000<u>đ</u></span>
+                                        <span id="output-cost">0<u>đ</u></span>
                                     </div>
                                 </div>
                             </div>
@@ -228,12 +230,68 @@
                             </div>
                         </div>
                     </div>
+                    <div id="result"> </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <script src="index.js"></script>
+    <script type="text/javascript">
+        if (typeof (Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("name-item-1", "Dầu Nhớt Fuchs Silkolene 10w40 và 10w30 chính hãng nhập khẩu từ Châu Âu");
+            // Retrieve
+            document.getElementById("name-of-item").innerHTML = localStorage.getItem("name-item-1");
+            //#
+            localStorage.setItem("capacity", "1 lít");
+            document.getElementById("mil").innerHTML = localStorage.getItem("capacity");
+        } else {
+            document.getElementById("name-of-item").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+    </script>
+    <script>
+        function clickCounterUp() {
+            if (typeof (Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("output-number").innerHTML = localStorage.clickcount;
+            } else {
+                document.getElementById("output-number").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+        function clickCounterDowm() {
+            if (typeof (Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount) - 1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("output-number").innerHTML = localStorage.clickcount;
+            } else {
+                document.getElementById("output-number").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+    <!-- <script>
+        function clickCounter() {
+            if (typeof (Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script> -->
+    <script>
+        function 
+    </script>
+    <script src="index.js"> </script>
 </body>
 
 </html>

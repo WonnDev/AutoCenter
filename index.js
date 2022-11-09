@@ -39,9 +39,12 @@
     }
 }
 
-/*** login click ***/
-const btnlogin = document.getElementsByClassName('btnlogin');
-
-btnlogin.addEventListener('click', () => btnlogin.style.display = "block");
-
 /******** cart ********/
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("name-item-1", "Dầu Nhớt Fuchs Silkolene 10w40 và 10w30 chính hãng nhập khẩu từ Châu Âu");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("name-item-1");
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }

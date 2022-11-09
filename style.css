@@ -50,8 +50,8 @@
 .info-item .group-img-text .item-img-text {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
 }
+
 #infomation .row {
   align-items: center;
 }
@@ -853,6 +853,10 @@ a .fa-angle-down {
   display: flex;
   flex-direction: column;
 }
+#login .box-input .form-right {
+  align-items: center;
+  justify-content: center;
+}
 .box-input label {
   font-size: 13px;
   margin: 5px 0;
@@ -882,6 +886,7 @@ a .fa-angle-down {
 .box-input .form-right button {
   width: 40%;
 }
+
 #signin .button-submit {
   max-width: 100%;
   text-align: center;
@@ -894,6 +899,9 @@ a .fa-angle-down {
   color: #e41a23;
   margin-top: 0.5rem;
   font-size: 14px;
+}
+#login .box-input a:hover {
+  color: var(--bs-link-hover-color);
 }
 #login .form-right h5 {
   text-transform: uppercase;
@@ -931,7 +939,7 @@ a .fa-angle-down {
 .login-with-gg i,
 .login-with-fb i {
   padding: 5px 10px;
-  border-right: 1px solid brown;
+  border-right: 1px solid darkgray;
 }
 .login-with-gg {
   background: orangered;
@@ -952,15 +960,19 @@ a .fa-angle-down {
 .title-table {
   border-bottom: 1px solid #ddd;
 }
-.title-table,
-.detail-title-table,
+#cart .title-table,
+#cart .detail-title-table,
 #cart .info-item,
-.info-item .right,
-.info-item .left,
-.number,
-.total {
+#cart .info-item .right,
+#cart .info-item .left,
+#cart .number,
+#cart .total {
   display: flex;
   flex-direction: row;
+}
+#cart .info-item .right {
+  text-align: center;
+  align-items: center;
 }
 .output-price,
 .output-cost span,
@@ -1002,9 +1014,11 @@ a .fa-angle-down {
   border: 1px solid #ddd;
   padding: 5px;
   cursor: pointer;
-  width: 22px;
+  width: 24px;
+  height: 30px;
+  text-align: center;
 }
-.info-item .right {
+#login .info-item .right {
   align-items: center;
   text-align: center;
 }
@@ -1045,6 +1059,24 @@ a .fa-angle-down {
 
 /**************************** REPONSIVE ***********************************/
 @media only screen and (max-width: 480px) {
+  .info-item .group-img-text .item-img-text {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  #infomation .info-item p {
+    margin-top: 0.5rem;
+    font-size: 16px;
+  }
+  #infomation .text {
+    padding: 0;
+  }
+  #infomation .group-img-text img {
+    margin-bottom: 0.5rem;
+  }
+  #infomation .item-img-text a {
+    font-size: 35px;
+  }
   #brand .group-item {
     overflow: auto;
     justify-content: unset;
@@ -1248,15 +1280,14 @@ a .fa-angle-down {
   }
   .box-input .button-login {
     position: relative;
-    top: -275px;
+    top: -200px;
     width: 40%;
   }
   .box-input button {
     width: 40%;
   }
-  #form-input .signin-with {
-    position: relative;
-    bottom: 75px;
+  #signin .box-input .form-right {
+    margin-top: 0;
   }
   /************************ cart *************************/
   .info-item .left {
@@ -1268,19 +1299,24 @@ a .fa-angle-down {
   .img-item img {
     width: 100px;
   }
-  .number span {
-    padding: 5px 3px;
-    width: 16px;
+  #cart .number span {
+    padding: 7px;
   }
-  .number {
+  #cart .number {
     flex-direction: column-reverse;
     text-align: center;
     align-items: center;
   }
-  .number .output-number {
+  #cart .number .output-number {
     border: 1px solid #ddd;
     border-bottom: 0;
     border-top: 0;
+  }
+  #cart .left .img-item {
+    width: 300px;
+  }
+  #cart .left .name-item {
+    padding: 0;
   }
 }
 
